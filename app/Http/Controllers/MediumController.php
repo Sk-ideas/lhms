@@ -6,6 +6,7 @@ use App\Repositories\Medium\MediumInterface;
 use App\Rules\uniqueForSchool;
 use App\Services\BootstrapTableService;
 use App\Services\ResponseService;
+use Auth;
 use Illuminate\Http\Request;
 use Throwable;
 
@@ -30,7 +31,7 @@ class MediumController extends Controller
         $request->validate([
             'name' => ['required', new uniqueForSchool('mediums', 'name')]
         ]);
-        $request->merge(['school_id' => 1]);
+        $request->merge(['school_id' => Auth::user()->school_id]);
         try {
             $this->medium->create($request->except('_token'));
             ResponseService::successResponse('Data Stored Successfully');
@@ -53,7 +54,7 @@ class MediumController extends Controller
             'name' => ['required', new uniqueForSchool('mediums', 'name', $id)]
         ]);
         try {
-            $request->merge(['school_id' => 1]);
+            $request->merge(['school_id' => Auth::user()->school_id]);
             $this->medium->update($id, $request->except(['_token', 'id']));
             $response = ['error' => false, 'message' => trans('Data Updated Successfully'),];
         } catch (Throwable $e) {

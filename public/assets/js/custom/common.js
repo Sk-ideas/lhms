@@ -164,13 +164,13 @@ $(document).on('click', '.change-school-status', function (e) {
     e.preventDefault();
     let school_id = $(this).data('id');
     Swal.fire({
-        title: window.trans["Are you sure"],
-        text: window.trans["change_school_status"],
+        title: "Are you sure",
+        text: "change_school_status",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: window.trans["Yes, Change it"]
+        confirmButtonText: "Yes, Change it"
     }).then((result) => {
         if (result.isConfirmed) {
             let url = baseUrl + '/schools/change/status/' + school_id;

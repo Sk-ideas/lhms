@@ -260,14 +260,14 @@ function select2Search(searchElement, searchUrl, data, placeHolder, templateDesi
  */
 function showSweetAlertConfirmPopup(url, method, options = {}) {
     let opt = {
-        title: window.trans["Are you sure"],
-        text: window.trans["You wont be able to revert this"],
+        title: "Are you sure",
+        text: "You wont be able to revert this",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: window.trans["Confirm"],
-        cancelButtonText: window.trans["Cancel"],
+        confirmButtonText: "Confirm",
+        cancelButtonText: "Cancel",
         successCallBack: function () {
         },
         errorCallBack: function (response) {
@@ -320,14 +320,14 @@ function showDeletePopupModal(url, options = {}) {
 
     // To Preserve OLD
     let opt = {
-        title: window.trans["Are you sure"],
-        text: window.trans["You wont be able to revert this"],
+        title: "Are you sure",
+        text: "You wont be able to revert this",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: window.trans["yes_delete"],
-        cancelButtonText: window.trans['Cancel'],
+        confirmButtonText: "yes_delete",
+        cancelButtonText: 'Cancel',
         successCallBack: function () {
         },
         errorCallBack: function (response) {

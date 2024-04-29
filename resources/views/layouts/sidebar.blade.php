@@ -429,11 +429,11 @@
         @endcan -->
 
         {{-- Schools --}}
-        {{-- @canany(['schools-list', 'schools-create', 'schools-edit', 'schools-delete'])
+        @canany(['schools-list', 'schools-create', 'schools-edit', 'schools-delete'])
             <li class="nav-item">
-                <a href="{{ route('schools.index') }}" class="nav-link"> <span class="menu-title">{{ __('schools') }}</span> <i class="fa fa-university menu-icon"></i> </a>
+                <a href="{{ route('schools.index') }}" class="nav-link"> <span class="menu-title">{{ __('institutions') }}</span> <i class="fa fa-university menu-icon"></i> </a>
             </li>
-        @endcanany --}}
+        @endcanany
 
 
         {{-- package --}}

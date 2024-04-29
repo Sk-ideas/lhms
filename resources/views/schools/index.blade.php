@@ -1,14 +1,14 @@
 @extends('layouts.master')
 
 @section('title')
-    {{ __('schools') }}
+    {{ __('institutions') }}
 @endsection
 
 @section('content')
     <div class="content-wrapper">
         <div class="page-header">
             <h3 class="page-title">
-                {{ __('manage') . ' ' . __('schools') }}
+                {{ __('manage') . ' ' . __('institutions') }}
             </h3>
         </div>
 
@@ -20,12 +20,12 @@
                             @csrf
                             <div class="bg-light p-4 mt-4">
                                 <h4 class="card-title mb-4">
-                                    {{ __('create') . ' ' . __('schools') }}
+                                    {{ __('create') . ' ' . __('institutions') }}
                                 </h4>
                                 <div class="row">
                                     <div class="form-group col-sm-12 col-md-6">
                                         <label for="school_name">{{ __('name') }} <span class="text-danger">*</span></label>
-                                        <input type="text" name="school_name" id="school_name" placeholder="{{__('schools')}}" class="form-control" required>
+                                        <input type="text" name="school_name" id="school_name" placeholder="{{__('institutions')}}" class="form-control" required>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-6">
                                         <label>{{ __('logo') }} <span class="text-danger">*</span></label>
@@ -38,11 +38,11 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-6">
-                                        <label for="school_support_email">{{ __('school').' '.__('email') }} <span class="text-danger">*</span></label>
+                                        <label for="school_support_email">{{ __('institution').' '.__('email') }} <span class="text-danger">*</span></label>
                                         <input type="email" name="school_support_email" id="school_support_email" placeholder="{{__('support').' '.__('email')}}" class="form-control" required>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-6">
-                                        <label for="school_support_phone">{{ __('school').' '.__('phone') }} <span class="text-danger">*</span></label>
+                                        <label for="school_support_phone">{{ __('institution').' '.__('phone') }} <span class="text-danger">*</span></label>
                                         <input type="number" name="school_support_phone" maxlength="16" id="school_support_phone" placeholder="{{__('support').' '.__('phone')}}" min="0" class="form-control remove-number-increment" required>
                                     </div>
                                     <div class="form-group col-sm-12 col-md-6">
@@ -108,7 +108,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h4 class="card-title">
-                            {{ __('list') . ' ' . __('schools') }}
+                            {{ __('list') . ' ' . __('institutions') }}
                         </h4>
                         <div class="row" id="toolbar">
                             <div class="form-group col-sm-12 col-md-4">
@@ -134,12 +134,12 @@
                                 <th scope="col" data-field="no">{{ __('no.') }}</th>
                                 <th scope="col" data-field="logo" data-formatter="imageFormatter">{{ __('logo') }}</th>
                                 <th scope="col" data-field="name">{{ __('name') }}</th>
-                                <th scope="col" data-field="support_email">{{__('school').' '.__('email')}}</th>
-                                <th scope="col" data-field="support_phone">{{__('school').' '.__('phone')}}</th>
+                                <th scope="col" data-field="support_email">{{__('institution').' '.__('email')}}</th>
+                                <th scope="col" data-field="support_phone">{{__('institution').' '.__('phone')}}</th>
                                 <th scope="col" data-field="tagline">{{ __('tagline') }}</th>
                                 <th scope="col" data-field="address">{{ __('address') }}</th>
                                 <th scope="col" data-field="admin_id" data-visible="false">{{ __('admin').' '.__('id')}}</th>
-                                <th scope="col" data-field="user" data-formatter="schoolAdminFormatter">{{ __('school').' '.__('admin') }}</th>
+                                <th scope="col" data-field="user" data-formatter="schoolAdminFormatter">{{ __('institution').' '.__('admin') }}</th>
                                 <th scope="col" data-field="active_plan">{{ __('active_plan') }}</th>
                                 <th scope="col" data-field="operate" data-events="schoolEvents" data-escape="false">{{ __('action') }}</th>
                             </tr>
@@ -156,7 +156,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">{{__('edit')}} {{__('school')}}</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">{{__('edit')}} {{__('institution')}}</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true"><i class="fa fa-close"></i></span>
                     </button>
@@ -166,7 +166,7 @@
                     <div class="modal-body">
                         <div class="form-group">
                             <label for="edit_school_name">{{ __('name') }} <span class="text-danger">*</span></label>
-                            <input type="text" name="edit_school_name" id="edit_school_name" placeholder="{{__('schools')}}" class="form-control" required>
+                            <input type="text" name="edit_school_name" id="edit_school_name" placeholder="{{__('institutions')}}" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>{{ __('logo') }}</label>
@@ -182,11 +182,11 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="edit_school_support_email">{{ __('school').' '.__('email') }} <span class="text-danger">*</span></label>
+                            <label for="edit_school_support_email">{{ __('institution').' '.__('email') }} <span class="text-danger">*</span></label>
                             <input type="email" name="edit_school_support_email" id="edit_school_support_email" placeholder="{{__('support').' '.__('email')}}" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label for="edit_school_support_phone">{{ __('school').' '.__('phone') }} <span class="text-danger">*</span></label>
+                            <label for="edit_school_support_phone">{{ __('institution').' '.__('phone') }} <span class="text-danger">*</span></label>
                             <input type="number" name="edit_school_support_phone" min="0" id="edit_school_support_phone" placeholder="{{__('support').' '.__('phone')}}" class="form-control remove-number-increment" required>
                         </div>
                         <div class="row">

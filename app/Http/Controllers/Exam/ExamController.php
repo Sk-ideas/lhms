@@ -208,7 +208,7 @@ class ExamController extends Controller
         }
     }
 
-    public function trash($id)
+    public function schoolstrash($id)
     {
         // ResponseService::noFeatureThenRedirect('Exam Management');
         ResponseService::noPermissionThenSendJson('exam-delete');
